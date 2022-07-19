@@ -7,12 +7,12 @@ import Form from '@/pages/form';
 
 describe('Form page', () => {
   describe('Render method', () => {
-    it('should have two paragraphs of `Lorem ipsum`', () => {
+    it('should have two paragraphs of `React-Form-Hooks`', () => {
       render(<Form />);
 
-      const paragraph = screen.getAllByText(/Lorem ipsum/);
+      const paragraph = screen.getAllByText(/React-Form-Hooks/);
 
-      expect(paragraph).toHaveLength(2);
+      expect(paragraph).toHaveLength(1);
     });
   });
 });
