@@ -8,14 +8,14 @@ type Data = {
  * @swagger
  * /api/hello:
  *   get:
- *     description: Returns the hello world
+ *     description: Returns the hello worldiiiiiiii
  *     responses:
  *       200:
- *         description: hello world
+ *         description: hello worldiiiiiiii
  */
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe1' });
+  res.status(200).json({ name: 'John Doe1iiiiiiis' });
 }
