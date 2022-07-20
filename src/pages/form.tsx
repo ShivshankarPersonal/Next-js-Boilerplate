@@ -40,8 +40,8 @@ const Form = () => {
           description='Data to Store in Database'
         />
       }>
-      <p>React-Form-Hooks</p>
-        <form onSubmit={onSubmit}>
+      <p >React-Form-Hooks</p>
+        <form onSubmit={onSubmit} className='forms-container'>
           <label>Enter Views</label>
           <input {...register('views')} />
           <label>Last Name</label>

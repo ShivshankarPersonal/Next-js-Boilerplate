@@ -39,7 +39,7 @@ p::before {
   content: "⚠ ";
 } */
 
-input {
+.forms-container input {
   display: block;
   box-sizing: border-box;
   /* width: 100%; */
@@ -50,7 +50,7 @@ input {
   font-size: 14px;
 }
 
-label {
+.forms-container label {
   line-height: 2;
   text-align: left;
   display: block;
@@ -61,8 +61,8 @@ label {
   /* font-weight: 200; */
 }
 
-button,
-input[type="submit"] {
+.forms-container button,
+.forms-container input[type="submit"] {
   background: #ec5990;
   color: white;
   text-transform: uppercase;
@@ -74,34 +74,34 @@ input[type="submit"] {
   letter-spacing: 10px;
 }
 
-button {
+.forms-container button {
   display: block;
   appearance: none;
   border-radius: 4px;
   /* width: 100%; */
 }
 
-input[type="submit"]:hover {
+.forms-container input[type="submit"]:hover {
   background: #bf1650;
 }
 
-input[type="button"]:active,
-input[type="submit"]:active {
+.forms-container input[type="button"]:active,
+.forms-container input[type="submit"]:active {
   transition: 0.3s all;
   transform: translateY(3px);
   border: 1px solid transparent;
   opacity: 0.8;
 }
 
-input:disabled {
+.forms-container input:disabled {
   opacity: 0.4;
 }
 
-input[type="button"]:hover {
+.forms-container input[type="button"]:hover {
   transition: 0.3s all;
 }
 
-input[type="button"],
-input[type="submit"] {
+.forms-container input[type="button"],
+.forms-container input[type="submit"] {
   -webkit-appearance: none;
 }
