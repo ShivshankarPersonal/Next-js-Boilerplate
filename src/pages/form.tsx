@@ -5,7 +5,7 @@ import * as React from "react";
 // import '@/styles/form.css';
 
 type FormData = {
-  firstName: string;
+  views: string;
   lastName: string;
 };
 
@@ -16,8 +16,21 @@ const Form = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
-  const onSubmit = handleSubmit(({ firstName, lastName }) => {
-    console.log(firstName, lastName);
+  const onSubmit =  handleSubmit(async ({ views, lastName }) => {
+    console.log(views, lastName);
+    try {
+      const res = await fetch('http://localhost:3000/api/postapi', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({firstName:'abc'}),
+      }); 
+      const nameObj = await res.json()
+      console.log(nameObj)
+  } catch (err) {
+      console.log(err);
+  }
   });
   return (
     <Main
@@ -29,8 +42,8 @@ const Form = () => {
       }>
       <p>React-Form-Hooks</p>
         <form onSubmit={onSubmit}>
-          <label>First Name</label>
-          <input {...register('firstName')} />
+          <label>Enter Views</label>
+          <input {...register('views')} />
           <label>Last Name</label>
           <input {...register('lastName')} />
 
